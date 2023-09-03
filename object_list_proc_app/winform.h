@@ -58,6 +58,15 @@
 	private: System::Windows::Forms::TextBox^ textBox2;
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::TextBox^ textBox7;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::Label^ label9;
 
 
 
@@ -93,11 +102,20 @@
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// load_button
 			// 
-			this->load_button->Location = System::Drawing::Point(824, 302);
+			this->load_button->Location = System::Drawing::Point(820, 280);
 			this->load_button->Name = L"load_button";
 			this->load_button->Size = System::Drawing::Size(75, 23);
 			this->load_button->TabIndex = 0;
@@ -107,7 +125,7 @@
 			// 
 			// save_button
 			// 
-			this->save_button->Location = System::Drawing::Point(824, 334);
+			this->save_button->Location = System::Drawing::Point(820, 312);
 			this->save_button->Name = L"save_button";
 			this->save_button->Size = System::Drawing::Size(75, 35);
 			this->save_button->TabIndex = 1;
@@ -117,7 +135,7 @@
 			// 
 			// add_button
 			// 
-			this->add_button->Location = System::Drawing::Point(821, 31);
+			this->add_button->Location = System::Drawing::Point(817, 29);
 			this->add_button->Name = L"add_button";
 			this->add_button->Size = System::Drawing::Size(75, 23);
 			this->add_button->TabIndex = 2;
@@ -127,52 +145,53 @@
 			// 
 			// TextBox
 			// 
-			this->TextBox->Location = System::Drawing::Point(294, 70);
+			this->TextBox->Location = System::Drawing::Point(290, 81);
 			this->TextBox->Multiline = true;
 			this->TextBox->Name = L"TextBox";
 			this->TextBox->ReadOnly = true;
 			this->TextBox->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
 			this->TextBox->Size = System::Drawing::Size(524, 300);
 			this->TextBox->TabIndex = 3;
+			this->TextBox->TextChanged += gcnew System::EventHandler(this, &WinForm::TextBox_TextChanged);
 			// 
 			// NameBox
 			// 
-			this->NameBox->Location = System::Drawing::Point(293, 34);
+			this->NameBox->Location = System::Drawing::Point(289, 32);
 			this->NameBox->Name = L"NameBox";
 			this->NameBox->Size = System::Drawing::Size(100, 20);
 			this->NameBox->TabIndex = 4;
 			// 
 			// XBox
 			// 
-			this->XBox->Location = System::Drawing::Point(399, 34);
+			this->XBox->Location = System::Drawing::Point(395, 32);
 			this->XBox->Name = L"XBox";
 			this->XBox->Size = System::Drawing::Size(100, 20);
 			this->XBox->TabIndex = 5;
 			// 
 			// YBox
 			// 
-			this->YBox->Location = System::Drawing::Point(505, 34);
+			this->YBox->Location = System::Drawing::Point(501, 32);
 			this->YBox->Name = L"YBox";
 			this->YBox->Size = System::Drawing::Size(100, 20);
 			this->YBox->TabIndex = 6;
 			// 
 			// TypeBox
 			// 
-			this->TypeBox->Location = System::Drawing::Point(611, 34);
+			this->TypeBox->Location = System::Drawing::Point(607, 32);
 			this->TypeBox->Name = L"TypeBox";
 			this->TypeBox->Size = System::Drawing::Size(100, 20);
 			this->TypeBox->TabIndex = 7;
 			// 
 			// TimeBox
 			// 
-			this->TimeBox->Location = System::Drawing::Point(717, 34);
+			this->TimeBox->Location = System::Drawing::Point(713, 32);
 			this->TimeBox->Name = L"TimeBox";
 			this->TimeBox->Size = System::Drawing::Size(100, 20);
 			this->TimeBox->TabIndex = 8;
 			// 
 			// Unsorted_list
 			// 
-			this->Unsorted_list->Location = System::Drawing::Point(12, 22);
+			this->Unsorted_list->Location = System::Drawing::Point(12, 41);
 			this->Unsorted_list->Multiline = true;
 			this->Unsorted_list->Name = L"Unsorted_list";
 			this->Unsorted_list->ReadOnly = true;
@@ -182,7 +201,7 @@
 			// 
 			// clear
 			// 
-			this->clear->Location = System::Drawing::Point(201, 198);
+			this->clear->Location = System::Drawing::Point(201, 217);
 			this->clear->Name = L"clear";
 			this->clear->Size = System::Drawing::Size(75, 23);
 			this->clear->TabIndex = 10;
@@ -192,7 +211,7 @@
 			// 
 			// IntervalBox1
 			// 
-			this->IntervalBox1->Location = System::Drawing::Point(12, 237);
+			this->IntervalBox1->Location = System::Drawing::Point(12, 256);
 			this->IntervalBox1->Name = L"IntervalBox1";
 			this->IntervalBox1->ReadOnly = true;
 			this->IntervalBox1->Size = System::Drawing::Size(17, 20);
@@ -202,7 +221,7 @@
 			// 
 			// intervalBox2
 			// 
-			this->intervalBox2->Location = System::Drawing::Point(35, 237);
+			this->intervalBox2->Location = System::Drawing::Point(35, 256);
 			this->intervalBox2->Name = L"intervalBox2";
 			this->intervalBox2->Size = System::Drawing::Size(49, 20);
 			this->intervalBox2->TabIndex = 15;
@@ -212,7 +231,7 @@
 			// intervalBox6
 			// 
 			this->intervalBox6->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 9));
-			this->intervalBox6->Location = System::Drawing::Point(255, 234);
+			this->intervalBox6->Location = System::Drawing::Point(255, 253);
 			this->intervalBox6->Name = L"intervalBox6";
 			this->intervalBox6->ReadOnly = true;
 			this->intervalBox6->Size = System::Drawing::Size(21, 23);
@@ -222,7 +241,7 @@
 			// 
 			// intervalBox3
 			// 
-			this->intervalBox3->Location = System::Drawing::Point(90, 237);
+			this->intervalBox3->Location = System::Drawing::Point(90, 256);
 			this->intervalBox3->Name = L"intervalBox3";
 			this->intervalBox3->Size = System::Drawing::Size(49, 20);
 			this->intervalBox3->TabIndex = 17;
@@ -231,7 +250,7 @@
 			// 
 			// intervalBox4
 			// 
-			this->intervalBox4->Location = System::Drawing::Point(145, 237);
+			this->intervalBox4->Location = System::Drawing::Point(145, 256);
 			this->intervalBox4->Name = L"intervalBox4";
 			this->intervalBox4->Size = System::Drawing::Size(49, 20);
 			this->intervalBox4->TabIndex = 18;
@@ -240,7 +259,7 @@
 			// 
 			// intervalBox5
 			// 
-			this->intervalBox5->Location = System::Drawing::Point(200, 237);
+			this->intervalBox5->Location = System::Drawing::Point(200, 256);
 			this->intervalBox5->Name = L"intervalBox5";
 			this->intervalBox5->Size = System::Drawing::Size(49, 20);
 			this->intervalBox5->TabIndex = 19;
@@ -249,27 +268,27 @@
 			// 
 			// textBox5
 			// 
-			this->textBox5->Location = System::Drawing::Point(200, 263);
+			this->textBox5->Location = System::Drawing::Point(200, 301);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(49, 20);
+			this->textBox5->Size = System::Drawing::Size(28, 20);
 			this->textBox5->TabIndex = 25;
 			this->textBox5->Text = L"10";
 			this->textBox5->TextChanged += gcnew System::EventHandler(this, &WinForm::textBox5_TextChanged);
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(145, 263);
+			this->textBox4->Location = System::Drawing::Point(145, 301);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(49, 20);
+			this->textBox4->Size = System::Drawing::Size(25, 20);
 			this->textBox4->TabIndex = 24;
 			this->textBox4->Text = L"12";
 			this->textBox4->TextChanged += gcnew System::EventHandler(this, &WinForm::textBox4_TextChanged);
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(90, 263);
+			this->textBox3->Location = System::Drawing::Point(90, 301);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(49, 20);
+			this->textBox3->Size = System::Drawing::Size(24, 20);
 			this->textBox3->TabIndex = 23;
 			this->textBox3->Text = L"30";
 			this->textBox3->TextChanged += gcnew System::EventHandler(this, &WinForm::textBox3_TextChanged);
@@ -277,7 +296,7 @@
 			// textBox6
 			// 
 			this->textBox6->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 9));
-			this->textBox6->Location = System::Drawing::Point(255, 260);
+			this->textBox6->Location = System::Drawing::Point(255, 298);
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->ReadOnly = true;
 			this->textBox6->Size = System::Drawing::Size(21, 23);
@@ -287,16 +306,16 @@
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(35, 263);
+			this->textBox2->Location = System::Drawing::Point(35, 301);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(49, 20);
+			this->textBox2->Size = System::Drawing::Size(28, 20);
 			this->textBox2->TabIndex = 21;
 			this->textBox2->Text = L"24";
 			this->textBox2->TextChanged += gcnew System::EventHandler(this, &WinForm::textBox2_TextChanged);
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(12, 263);
+			this->textBox1->Location = System::Drawing::Point(12, 301);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->ReadOnly = true;
 			this->textBox1->Size = System::Drawing::Size(17, 20);
@@ -306,18 +325,108 @@
 			// 
 			// textBox7
 			// 
-			this->textBox7->Location = System::Drawing::Point(12, 305);
+			this->textBox7->Location = System::Drawing::Point(12, 342);
 			this->textBox7->Name = L"textBox7";
 			this->textBox7->Size = System::Drawing::Size(49, 20);
 			this->textBox7->TabIndex = 26;
 			this->textBox7->Text = L"0";
 			this->textBox7->TextChanged += gcnew System::EventHandler(this, &WinForm::textBox7_TextChanged);
 			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(12, 240);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(72, 13);
+			this->label1->TabIndex = 27;
+			this->label1->Text = L"distance limits";
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(12, 283);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(51, 13);
+			this->label2->TabIndex = 28;
+			this->label2->Text = L"time limits";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(67, 345);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(47, 13);
+			this->label3->TabIndex = 29;
+			this->label3->Text = L"type limit";
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(12, 22);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(51, 13);
+			this->label4->TabIndex = 30;
+			this->label4->Text = L"object list";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(287, 65);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(32, 13);
+			this->label5->TabIndex = 31;
+			this->label5->Text = L"result";
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(67, 304);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(16, 13);
+			this->label6->TabIndex = 32;
+			this->label6->Text = L"hr";
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(120, 304);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(18, 13);
+			this->label7->TabIndex = 33;
+			this->label7->Text = L"ds";
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(170, 304);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(24, 13);
+			this->label8->TabIndex = 34;
+			this->label8->Text = L"mth";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(233, 304);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(15, 13);
+			this->label9->TabIndex = 35;
+			this->label9->Text = L"yr";
+			// 
 			// WinForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(913, 393);
+			this->ClientSize = System::Drawing::Size(913, 403);
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->label8);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->label5);
+			this->Controls->Add(this->label4);
+			this->Controls->Add(this->label3);
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->textBox7);
 			this->Controls->Add(this->textBox5);
 			this->Controls->Add(this->textBox4);
@@ -366,5 +475,7 @@
 	//Utils
 	std::string convert(System::String^ convertable);
 	System::String^ convert(std::string convertable);
+private: System::Void TextBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 

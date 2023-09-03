@@ -67,6 +67,11 @@
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::Label^ label10;
+	private: System::Windows::Forms::Label^ label11;
+	private: System::Windows::Forms::Label^ label12;
+	private: System::Windows::Forms::Label^ label13;
+	private: System::Windows::Forms::Label^ label14;
 
 
 
@@ -111,6 +116,11 @@
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// load_button
@@ -413,11 +423,61 @@
 			this->label9->TabIndex = 35;
 			this->label9->Text = L"yr";
 			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Location = System::Drawing::Point(287, 16);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(33, 13);
+			this->label10->TabIndex = 36;
+			this->label10->Text = L"name";
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Location = System::Drawing::Point(392, 16);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(12, 13);
+			this->label11->TabIndex = 37;
+			this->label11->Text = L"x";
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Location = System::Drawing::Point(498, 16);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(12, 13);
+			this->label12->TabIndex = 38;
+			this->label12->Text = L"y";
+			// 
+			// label13
+			// 
+			this->label13->AutoSize = true;
+			this->label13->Location = System::Drawing::Point(604, 16);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(27, 13);
+			this->label13->TabIndex = 39;
+			this->label13->Text = L"type";
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->Location = System::Drawing::Point(710, 16);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(26, 13);
+			this->label14->TabIndex = 40;
+			this->label14->Text = L"time";
+			// 
 			// WinForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(913, 403);
+			this->Controls->Add(this->label14);
+			this->Controls->Add(this->label13);
+			this->Controls->Add(this->label12);
+			this->Controls->Add(this->label11);
+			this->Controls->Add(this->label10);
 			this->Controls->Add(this->label9);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label7);

@@ -1,4 +1,5 @@
 ﻿	#pragma once
+#include "smallapi.h"
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -12,7 +13,8 @@
 	public:
 		WinForm(void)
 		{
-			InitializeComponent();
+			InitializeComponent(); 
+			api = new SmallApi();
 		}
 
 	protected:
@@ -162,7 +164,6 @@
 			this->TextBox->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
 			this->TextBox->Size = System::Drawing::Size(524, 300);
 			this->TextBox->TabIndex = 3;
-			this->TextBox->TextChanged += gcnew System::EventHandler(this, &WinForm::TextBox_TextChanged);
 			// 
 			// NameBox
 			// 
@@ -535,7 +536,7 @@
 	//Utils
 	std::string convert(System::String^ convertable);
 	System::String^ convert(std::string convertable);
-private: System::Void TextBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
+private: 
+	SmallApi* api;
 };
 

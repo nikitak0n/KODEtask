@@ -57,8 +57,6 @@ void ObjectsList::add(stringstream &filedata)
 
 void ObjectsList::to_str(stringstream &res)
 {
-	std::string buf;
-
 	res << "// Сортировка по имени:\n";
 	res << simple_groupung<char>(&grouping_by_name);
 	res << '\n' << '\n';
